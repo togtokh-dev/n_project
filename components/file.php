@@ -69,15 +69,16 @@
                     <div class="row">
                       <label class="col-3"></label>
                       <div class="col-9">
-                        <h6 class="text-dark font-weight-bold mb-10">Customer Info:</h6>
+                        <h6 class="text-dark font-weight-bold mb-10">Хэрэглэгчийн мэдээлэл:</h6>
                       </div>
                     </div>
                     <!--end::Row-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Avatar</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Аватар</label>
                       <div class="col-9">
-                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(assets/media/users/blank.png)">
+                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(
+                          <?php if($_SESSION['user']['zurag']){echo $_SESSION['user']['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>)">
                           <div class="image-input-wrapper"></div>
                           <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
                             <i class="fa fa-pen icon-sm text-muted"></i>
@@ -96,31 +97,30 @@
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">First Name</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Овог</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="Anna" />
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['ajiltanOvog']; ?>"disabled />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Last Name</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Нэр</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="Krox" />
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['ajiltanNer']; ?>"disabled  />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Company Name</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Email</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="Loop Inc." />
-                        <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['mail']; ?>." disabled />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Contact Phone</label>
                       <div class="col-9">
                         <div class="input-group input-group-lg input-group-solid">
@@ -133,10 +133,10 @@
                         </div>
                         <span class="form-text text-muted">We'll never share your email with anyone else.</span>
                       </div>
-                    </div>
+                    </div> -->
                     <!--end::Group-->
                     <!--begin::Group-->
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Email Address</label>
                       <div class="col-9">
                         <div class="input-group input-group-lg input-group-solid">
@@ -148,10 +148,10 @@
                           <input type="text" class="form-control form-control-lg form-control-solid" value="anna.krox@loop.com" placeholder="Email" />
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <!--end::Group-->
                     <!--begin::Group-->
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Company Site</label>
                       <div class="col-9">
                         <div class="input-group input-group-lg input-group-solid">
@@ -161,7 +161,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <!--end::Group-->
                   </div>
                 </div>
