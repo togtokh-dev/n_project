@@ -5,7 +5,7 @@
     <div class="container">
       <!--begin::Topbar-->
       <div class="d-flex justify-content-between align-items-center border-bottom border-white py-7">
-        <h3 class="h4 text-dark mb-0">Help Center</h3>
+        <h3 class="h4 text-dark mb-0"></h3>
         <div class="d-flex">
           <a href="#" class="font-size-h6 font-weight-bold">Community</a>
           <a href="#" class="font-size-h6 font-weight-bold ml-8">Visit Blog</a>
@@ -14,7 +14,7 @@
       <!--end::Topbar-->
       <div class="d-flex align-items-stretch text-center flex-column py-40">
         <!--begin::Heading-->
-        <h1 class="text-dark font-weight-bolder mb-12">How can we help?</h1>
+        <h1 class="text-dark font-weight-bolder mb-12">МСМ компани</h1>
         <!--end::Heading-->
         <!--begin::Form-->
         <form class="d-flex position-relative w-75 px-lg-40 m-auto">
@@ -71,8 +71,8 @@
               <!--end::Icon-->
               <!--begin::Content-->
               <div class="d-flex flex-column">
-                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">Get Started</a>
-                <div class="text-dark-75">Base FAQ Questions</div>
+                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">Компани</a>
+                <div class="text-dark-75">Танилцуулга</div>
               </div>
               <!--end::Content-->
             </div>
@@ -102,8 +102,8 @@
               <!--end::Icon-->
               <!--begin::Content-->
               <div class="d-flex flex-column">
-                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">Tutorials</a>
-                <div class="text-dark-75">Books &amp; Articles</div>
+                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">Мэндчилгээ</a>
+                <div class="text-dark-75">Захирлын мэндчилгээ &amp; Хамт олон</div>
               </div>
               <!--end::Content-->
             </div>
@@ -133,8 +133,8 @@
               <!--end::Icon-->
               <!--begin::Content-->
               <div class="d-flex flex-column">
-                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">User Guide</a>
-                <div class="text-dark-75">Complete Knowledgebase</div>
+                <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">Энэ өдрийн мэнд хүргэе</a>
+                <div class="text-dark-75">Амжилт хүсье</div>
               </div>
               <!--end::Content-->
             </div>
@@ -150,43 +150,17 @@
     <div class="card">
       <div class="card-body">
         <div class="p-6">
-          <h2 class="text-dark mb-8">Buying Product &amp; Support</h2>
+          <h2 class="text-dark mb-8">Компани</h2>
           <div class="row">
             <div class="col-lg-3">
               <!--begin::Navigation-->
               <ul class="navi navi-link-rounded navi-accent navi-hover flex-column mb-8 mb-lg-0" role="tablist">
                 <!--begin::Nav Item-->
-                <li class="navi-item mb-2">
-                  <a class="navi-link" data-toggle="tab" href="#">
-                    <span class="navi-text text-dark-50 font-size-h5 font-weight-bold">Buying</span>
-                  </a>
-                </li>
                 <!--end::Nav Item-->
                 <!--begin::Nav Item-->
                 <li class="navi-item mb-2">
                   <a class="navi-link active" data-toggle="tab" href="#">
-                    <span class="navi-text text-dark font-size-h5 font-weight-bold">Product Support</span>
-                  </a>
-                </li>
-                <!--end::Nav Item-->
-                <!--begin::Nav Item-->
-                <li class="navi-item mb-2">
-                  <a class="navi-link" data-toggle="tab" href="#">
-                    <span class="navi-text text-dark-50 font-size-h5 font-weight-bold">Account Management</span>
-                  </a>
-                </li>
-                <!--end::Nav Item-->
-                <!--begin::Nav Item-->
-                <li class="navi-item mb-2">
-                  <a class="navi-link" data-toggle="tab" href="#">
-                    <span class="navi-text text-dark-50 font-size-h5 font-weight-bold">Product Licenses</span>
-                  </a>
-                </li>
-                <!--end::Nav Item-->
-                <!--begin::Nav Item-->
-                <li class="navi-item mb-2">
-                  <a class="navi-link" data-toggle="tab" href="#">
-                    <span class="navi-text text-dark-50 font-size-h5 font-weight-bold">Downloads</span>
+                    <span class="navi-text text-dark font-size-h5 font-weight-bold">Танилцуулга</span>
                   </a>
                 </li>
                 <!--end::Nav Item-->
@@ -212,13 +186,13 @@
                         </svg>
                         <!--end::Svg Icon-->
                       </span>
-                      <div class="card-label text-dark pl-4">Product Inventory</div>
+                      <div class="card-label text-dark pl-4">Компаний танилцуулга</div>
                     </div>
                   </div>
                   <!--end::Header-->
                   <!--begin::Body-->
                   <div id="collapseOne7" class="collapse show" aria-labelledby="headingOne7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</div>
+                    <div class="card-body text-dark-50 font-size-lg pl-12">МСМ компани нь програм хангамж боловсруулах, системийн интеграци болон мэдээллийн системийн цогц шийдлийг зах зээлд нийлүүлэн ажиллахаар 1996 онд байгуулагдсан бөгөөд Монголын мэдээлэл технологийн салбарын шилдэг компаниудын нэг билээ. Байгуулагдсан цагаасаа хойш чанартай бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж үйлчлүүлэгчдийнхээ сэтгэл ханамжийг өндөр байлгахыг зорилгоо болгон ажиллаж, Монголдоо “анхдагч” хэмээх тодотгол бүхий системийн шийдлүүд болон програм хангамжийн олон бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж байгаагаараа бид бахархдаг.</div>
                   </div>
                   <!--end::Body-->
                 </div>
@@ -239,18 +213,95 @@
                         </svg>
                         <!--end::Svg Icon-->
                       </span>
-                      <div class="card-label text-dark pl-4">Order Statistics</div>
+                      <div class="card-label text-dark pl-4">Алсын хараа</div>
                     </div>
                   </div>
                   <!--end::Header-->
                   <!--begin::Body-->
                   <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                    <div class="card-body text-dark-50 font-size-lg pl-12">Цахим засгийн болон цахим бизнесийн шийдлийг дэлхийн түвшинд боловсруулна.</div>
                   </div>
                   <!--end::Body-->
                 </div>
                 <!--end::Item-->
                 <!--begin::Item-->
+                <div class="card">
+                  <!--begin::Header-->
+                  <div class="card-header" id="headingTwo7">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
+                      <span class="svg-icon svg-icon-primary">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
+                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
+                          </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <div class="card-label text-dark pl-4">Эрхэм зорилго</div>
+                    </div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
+                    <div class="card-body text-dark-50 font-size-lg pl-12">Үргэлж шинийг эрэлхийлж, чанарыг эрхэмлэн, харилцагчдынхаа бүтээмжийг дээшлүүлж, зорилгодоо хүрэхэд нь тусална.</div>
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <div class="card">
+                  <!--begin::Header-->
+                  <div class="card-header" id="headingTwo7">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
+                      <span class="svg-icon svg-icon-primary">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
+                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
+                          </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <div class="card-label text-dark pl-4">Хүний нөөцийн зорилт</div>
+                    </div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
+                    <div class="card-body text-dark-50 font-size-lg pl-12">Мэдлэгт суурилсан үйл ажиллагаа явуулдаг аливаа байгууллагын хамгийн үнэт зүйл бол хүний нөөц буюу мэргэжилтнүүд байдаг. Интерактив компани нь програм хангамж, системийн интеграцийн чиглэлээр сүүлийн 20 жилийн турш тасралтгүй ажиллаж, хүний нөөц, технологи дээр суурилсан үйл ажиллагаа явуулж ирсэн төдийгүй хүний нөөцийг хөгжүүлэх чиглэлээр өөрийн аргачлал, сургалтын хөтөлбөртэй, чанарын удирдлагын стандарт бүхий хүний нөөцийн удирдлагын иж бүрэн процесстой  байгууллага болон хөгжиж байна.</div>
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+                <div class="card">
+                  <!--begin::Header-->
+                  <div class="card-header" id="headingTwo7">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
+                      <span class="svg-icon svg-icon-primary">
+                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
+                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
+                          </g>
+                        </svg>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <div class="card-label text-dark pl-4">Салбарын хөгжил</div>
+                    </div>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
+                    <div class="card-body text-dark-50 font-size-lg pl-12">Салбарын манлайлагч, ууган компани болохын хувьд өөрийн туршлага, чадвараа бусад програм хангамжийн компаниудад хуваалцан, хамтран хөгжих бодлогыг баримтлан ажиллаж байна. Энэ үүднээс Интерактив компани нь 2012 оноос МТҮПаркын зөвлөх компаниар ажиллаж өөрийн туршлага, менежмент, чанарын стандарт нэвтрүүлэх зэргээр инкубаторын болон салбарын бусад компаниудад зөвлөгөө өгч байна. Мөн өгөгдлийн сангийн технологиор дэлхийд тэргүүлэх компани Оракл-ын алтан түншээр ажиллаж, харилцагчдаа тэргүүлэх шийдлүүдийг нийлүүлэхээс гадна харилцагчид болон бусад компаниудад албан ёсны сургалтууд тогтмол явуулдаг нь салбарын боловсон хүчний чадавхыг сайжруулахад тодорхой хэмжээгээр нөлөө үзүүлдэг.</div>
+                  </div>
+                  <!--end::Body-->
+                </div>
                 <div class="card">
                   <!--begin::Header-->
                   <div class="card-header" id="headingThree7">
@@ -266,13 +317,13 @@
                         </svg>
                         <!--end::Svg Icon-->
                       </span>
-                      <div class="card-label text-dark pl-4">eCommerce Reports</div>
+                      <div class="card-label text-dark pl-4">Нийгмийн хариуцлага</div>
                     </div>
                   </div>
                   <!--end::Header-->
                   <!--begin::Body-->
                   <div id="collapseThree7" class="collapse" aria-labelledby="headingThree7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                    <div class="card-body text-dark-50 font-size-lg pl-12">МСМ нь ил тод нээлттэй байж  Монгол Улсын хууль дүрмийг чанд сахин, олон улсын дүрэм, стандартуудыг даган мөрдөж, бизнесийн ёс зүйг дээдлэн, нийгмийн хариуцлагыг хэрэгжүүлэгч компани байхын төлөө ажилладаг.</div>
                   </div>
                   <!--end::Body-->
                 </div>
@@ -291,20 +342,20 @@
     <div class="card card-custom p-6">
       <div class="card-body">
         <!--begin::Heading-->
-        <h2 class="text-dark mb-8">AirPlus SAAS License</h2>
+        <h2 class="text-dark mb-8">Мэндчилгээ</h2>
         <!--end::Heading-->
         <!--begin::Content-->
-        <h4 class="font-weight-bold text-dark mb-4">Basic License</h4>
+        <h4 class="font-weight-bold text-dark mb-4">Захирлын мэндчилгээ</h4>
         <div class="text-dark-50 line-height-lg mb-8">
-          <p>Windows 10 automatically downloads and installs updates to make sure your device is secure and up to date. This means you receive the latest fixes and security updates, helping your device run efficiently and stay protected. In most cases, restarting your device completes the update. Make sure your device is plugged in when you know updates will be installed.</p>
-          <a class="font-weight-bold" href="#">Read More</a>
+          <p>Манай компанийг сонгож буй эрхэм Танд энэ өдрийн мэнд хүргэе. МСМ компани нь үүсэн байгуулагдсан цагаасаа хойш Мэдээллийн технологи, програм хангамжийн салбарт үргэлж шинийг хийж бүтээж, үйлчлүүлэгч харилцагчдынхаа хэрэгцээ шаардлагад нийцсэн бүтээгдэхүүн үйлчилгээг хүргэхийн төлөө хичээн ажиллаж байна. Бид 2012 онд Чанарын Удирдлагын ISO 9001:2008 стандартыг үйл ажиллагаандаа амжилттай нэвтрүүлж, Австралид  төвтэй SAI GLOBAL олон улсын итгэмжлэлийн байгууллагаар итгэмжлүүллээ. Ингэснээр бид Програм хангамж үйлдвэрлэлийн дотоод процесс, шат дамжлага, зохион байгуулалтыг олон улсын түвшинд хийж байгаагаа баталгаажуулж байгаа бөгөөд энэ нь эцсийн дүндээ чанарын төлөө, хэрэглэгчийн төлөө бидний зорилготой нягт уялдаж байгаа билээ. Бид Цахим засаг, Цахим бизнесийн салбарт та бүхний итгэлийг хүлээсэн, найдвартай түнш тань байхын төлөө хичээн ажиллах болно. Та бүхний ажил тань амжилт бүтээлээр, амьдрал тань аз жаргалаар дүүрэн байхын ерөөл дэвшүүлье. Хүндэтгэсэн,Ерөнхий захирал Батболдын Өнөр.</p>
+          <a class="font-weight-bold" href="#"></a>
         </div>
         <!--end::Content-->
         <!--begin::Content-->
-        <h4 class="font-weight-bold text-dark mb-4">Extended License</h4>
+        <h4 class="font-weight-bold text-dark mb-4">Хамт олон</h4>
         <div class="text-dark-50 line-height-lg">
-          <p>Windows 10 automatically downloads and installs updates to make sure your device is secure and up to date. This means you receive the latest fixes and security updates, helping your device run efficiently and stay protected. In most cases, restarting your device completes the update. Make sure your device is plugged in when you know updates will be installed.</p>
-          <a class="font-weight-bold" href="#">Read More</a>
+          <p>Мэдлэгт суурилсан үйл ажиллагаа явуулдаг аливаа байгууллагын хамгийн үнэт зүйл бол хүний нөөц буюу мэргэжилтнүүд байдаг. МСМ компани нь програм хангамж, ERP систем хөгжүүлэлт, бизнес процессийн анализ, судалгаа чиглэлээр сүүлийн 10 –аад жилийн турш тасралтгүй ажиллаж, хүний нөөц, технологи дээр суурилсан үйл ажиллагаа явуулж ирсэн төдийгүй хүний нөөцийг хөгжүүлэх чиглэлээр өөрийн аргачлал, сургалтын хөтөлбөртэй, чанарын удирдлагын стандарт бүхий хүний нөөцийн удирдлагын иж бүрэн процесстой болон хөгжиж байна.</p>
+          <a class="font-weight-bold" href="#"></a>
         </div>
         <!--end::Content-->
       </div>
