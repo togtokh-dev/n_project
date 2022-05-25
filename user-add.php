@@ -157,7 +157,7 @@
 					</div>
 					<!--end::Header-->
 					<!--begin::Content-->
-          <?php include('./components/file.php'); ?>
+          <?php include('./components/add-user.php'); ?>
 					<!--end::Content-->
 					<!--begin::Footer-->
 					<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">

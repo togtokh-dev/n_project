@@ -127,7 +127,7 @@
 									<ul class="menu-nav">
 										<li class="menu-item menu-item-submenu menu-item-rel menu-item-active" data-menu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="menu-link menu-toggle">
-												<span class="menu-text">Баримт бичгийн жагсаалт</span>
+												<span class="menu-text">Хөтөлбөрүүд</span>
 												<i class="menu-arrow"></i>
 											</a>
                     </li>
@@ -157,7 +157,7 @@
 					</div>
 					<!--end::Header-->
 					<!--begin::Content-->
-          <?php include('./components/file.php'); ?>
+          <?php include('./components/table.php'); ?>
 					<!--end::Content-->
 					<!--begin::Footer-->
 					<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
