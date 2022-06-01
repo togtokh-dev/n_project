@@ -1,3 +1,8 @@
+<?php
+  $query = "SELECT * FROM ajiltan where ajiltanCode ='$user_id'";
+  $results = mysqli_query($db, $query);
+  $user_datas = mysqli_fetch_assoc($results);
+ ?>
 <div class="content d-flex flex-column flex-column-fluid " id="kt_content">
   <!--begin::Entry-->
   <div class="d-flex flex-column-fluid">
@@ -57,7 +62,7 @@
         <!--end::Card header-->
         <!--begin::Card body-->
         <div class="card-body px-0">
-          <form class="form" id="kt_form">
+          <form class="form" id="kt_form" action="./update.php" method="post" enctype="multipart/form-data">
             <div class="tab-content">
               <!--begin::Tab-->
               <div class="tab-pane show active px-7" id="kt_user_edit_tab_1" role="tabpanel">
@@ -77,20 +82,10 @@
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Аватар</label>
                       <div class="col-9">
-                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(
-                          <?php if($_SESSION['user']['zurag']){echo $_SESSION['user']['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>)">
-                          <div class="image-input-wrapper"></div>
-                          <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
-                            <i class="fa fa-pen icon-sm text-muted"></i>
-                            <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" name="profile_avatar_remove" />
-                          </label>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="Remove avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
+                          <input class="form-control form-control-lg form-control-solid mb-1" type="file" name="profile_avatar" id="imageFile_img" />
+                          <input type="text" name="profile_avatar" value="<?php if($user_datas['zurag']){echo $user_datas['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>" hidden>
+                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" >
+                          <img src="<?php if($user_datas['zurag']){echo $user_datas['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>" class="image-input-wrapper" id="preview_img" alt="">
                         </div>
                       </div>
                     </div>
@@ -99,7 +94,7 @@
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Овог</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['ajiltanOvog']; ?>"disabled />
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php print_r($user_datas['ajiltanOvog']); ?>"disabled />
                       </div>
                     </div>
                     <!--end::Group-->
@@ -107,7 +102,7 @@
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Нэр</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['ajiltanNer']; ?>"disabled  />
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php print_r($user_datas['ajiltanNer']); ?>"disabled/>
                       </div>
                     </div>
                     <!--end::Group-->
@@ -115,57 +110,37 @@
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Email</label>
                       <div class="col-9">
-                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php echo $_SESSION['user']['mail']; ?>." disabled />
+                        <input class="form-control form-control-lg form-control-solid" type="text" value="<?php print_r($user_datas['mail']); ?>" disabled/>
                       </div>
                     </div>
-                    <!--end::Group-->
-                    <!--begin::Group-->
-                    <!-- <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Contact Phone</label>
+                    <div class="form-group row">
+                      <label class="col-form-label col-3 text-lg-right text-left">Холбоо барих дугаар</label>
                       <div class="col-9">
-                        <div class="input-group input-group-lg input-group-solid">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="la la-phone"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control form-control-lg form-control-solid" value="+45678967456" placeholder="Phone" />
-                        </div>
-                        <span class="form-text text-muted">We'll never share your email with anyone else.</span>
+                        <input class="form-control form-control-lg form-control-solid" type="text" name="number" value="<?php print_r($user_datas['number']); ?>"/>
                       </div>
-                    </div> -->
-                    <!--end::Group-->
-                    <!--begin::Group-->
-                    <!-- <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Email Address</label>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-3 text-lg-right text-left">Хаяг</label>
                       <div class="col-9">
-                        <div class="input-group input-group-lg input-group-solid">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="la la-at"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control form-control-lg form-control-solid" value="anna.krox@loop.com" placeholder="Email" />
-                        </div>
+                        <input class="form-control form-control-lg form-control-solid" type="text"  name="address" value="<?php print_r($user_datas['address']); ?>" />
                       </div>
-                    </div> -->
-                    <!--end::Group-->
-                    <!--begin::Group-->
-                    <!-- <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Company Site</label>
-                      <div class="col-9">
-                        <div class="input-group input-group-lg input-group-solid">
-                          <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Username" value="loop" />
-                          <div class="input-group-append">
-                            <span class="input-group-text">.com</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div> -->
-                    <!--end::Group-->
+                    </div>
                   </div>
                 </div>
                 <!--end::Row-->
+                <div class="card-footer pb-0">
+                  <div class="row">
+                    <div class="col-xl-2"></div>
+                    <div class="col-xl-7">
+                      <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-9">
+                          <button  type="submit" name="user" class="btn btn-light-primary font-weight-bold">Хадгалах</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!--end::Tab-->
               <!--begin::Tab-->
@@ -176,60 +151,60 @@
                   <div class="row">
                     <div class="col-xl-2"></div>
                     <div class="col-xl-7">
-                      <!--begin::Row-->
-                      <div class="row mb-5">
-                        <label class="col-3"></label>
-                        <div class="col-9">
-                          <div class="alert alert-custom alert-light-danger fade show py-4" role="alert">
-                            <div class="alert-icon">
-                              <i class="flaticon-warning"></i>
-                            </div>
-                            <div class="alert-text font-weight-bold">Configure user passwords to expire periodically.
-                            <br />Users will need warning that their passwords are going to expire, or they might inadvertently get locked out of the system!</div>
-                            <div class="alert-close">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">
-                                  <i class="la la-close"></i>
-                                </span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--end::Row-->
-                      <!--begin::Row-->
-                      <div class="row">
-                        <label class="col-3"></label>
-                        <div class="col-9">
-                          <h6 class="text-dark font-weight-bold mb-10">Change Or Recover Your Password:</h6>
-                        </div>
-                      </div>
-                      <!--end::Row-->
                       <!--begin::Group-->
                       <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">Current Password</label>
+                        <label class="col-form-label col-3 text-lg-right text-left">3 үеийн намтар</label>
                         <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid mb-1" type="text" value="Current password" />
-                          <a href="#" class="font-weight-bold font-size-sm">Forgot password ?</a>
+                          <input class="form-control form-control-lg form-control-solid mb-1" type="file" name="gurvanUy"  />
+                          <input type="text" name="gurvanUy" value="<?php echo $user_datas['gurvanUy']; ?>" hidden>
+                          <?php if($user_datas['gurvanUy']!=''){ ?>
+                            <a href="<?php echo $user_datas['gurvanUy']; ?>">Татах</a>
+                          <?php } ?>
                         </div>
                       </div>
                       <!--end::Group-->
                       <!--begin::Group-->
                       <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">New Password</label>
+                        <label class="col-form-label col-3 text-lg-right text-left">Диплом хуулбар</label>
                         <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid" type="text" value="New password" />
+                          <input class="form-control form-control-lg form-control-solid mb-1" type="file" name="diplomm"  />
+                          <input type="text" name="diplomm" value="<?php echo $user_datas['diplomm']; ?>" hidden>
+                          <?php if($user_datas['diplomm']!=''){ ?>
+                            <a href="<?php echo $user_datas['diplomm']; ?>">Татах</a>
+                          <?php } ?>
                         </div>
                       </div>
                       <!--end::Group-->
                       <!--begin::Group-->
                       <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">Verify Password</label>
+                        <label class="col-form-label col-3 text-lg-right text-left">И-Үнэмлэхийн хуулбар</label>
                         <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid" type="text" value="Verify password" />
+                          <input class="form-control form-control-lg form-control-solid mb-1" type="file" name="IUnemleh"  />
+                          <input type="text" name="IUnemleh" value="<?php echo $user_datas['IUnemleh']; ?>" hidden>
+                          <?php if($user_datas['IUnemleh']!=''){ ?>
+                            <a href="<?php echo $user_datas['IUnemleh']; ?>">Татах</a>
+                          <?php } ?>
                         </div>
                       </div>
                       <!--end::Group-->
+                      <!--begin::Group-->
+                      <div class="form-group row">
+                        <label class="col-form-label col-3 text-lg-right text-left">Хуучин ажилын тодохойлолт</label>
+                        <div class="col-9">
+                          <input class="form-control form-control-lg form-control-solid mb-1" type="file" name="todorhoilol"  />
+                          <input type="text" name="todorhoilol" value="<?php echo $user_datas['todorhoilol']; ?>" hidden>
+                          <?php if($user_datas['todorhoilol']!=''){ ?>
+                            <a href="<?php echo $user_datas['todorhoilol']; ?>">Татах</a>
+                          <?php } ?>
+                        </div>
+                      </div>
+                      <!--end::Group-->
+                      <div class="form-group row">
+                        <label class="col-form-label col-3 text-lg-right text-left">Данс</label>
+                        <div class="col-9">
+                          <input class="form-control form-control-lg form-control-solid" type="text"  name="dans" value="<?php print_r($user_datas['dans']); ?>" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <!--end::Row-->
@@ -243,9 +218,7 @@
                       <div class="row">
                         <div class="col-3"></div>
                         <div class="col-9">
-                          <a href="#" class="btn btn-light-primary font-weight-bold">Save changes</a>
-                          <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
-                        </div>
+                          <button type="submit" name="user" class="btn btn-light-primary font-weight-bold">Хадгалах</a>
                       </div>
                     </div>
                   </div>
@@ -264,3 +237,16 @@
   </div>
   <!--end::Entry-->
 </div>
+<script type="text/javascript">
+$('#imageFile_img').change(function(evt) {
+          var files = evt.target.files;
+          var file = files[0];
+          if (file) {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                $('#preview_img').attr('src',e.target.result)
+              };
+              reader.readAsDataURL(file);
+          }
+      });
+</script>

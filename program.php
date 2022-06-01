@@ -157,7 +157,8 @@
 					</div>
 					<!--end::Header-->
 					<!--begin::Content-->
-          <?php include('./components/table.php'); ?>
+          <?php include('./components/program.php'); ?>
+
 					<!--end::Content-->
 					<!--begin::Footer-->
 					<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
@@ -268,6 +269,95 @@
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
 		<script src="assets/js/pages/crud/ktdatatable/base/html-table.js"></script>
+    <script type="text/javascript">
+
+    var KTCalendarBasic = function() {
+
+  return {
+      //main function to initiate the module
+      init: function() {
+          var todayDate = moment().startOf('day');
+          var YM = todayDate.format('YYYY-MM');
+          var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
+          var TODAY = todayDate.format('YYYY-MM-DD');
+          var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
+
+          var calendarEl = document.getElementById('kt_calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+              themeSystem: 'bootstrap',
+
+              isRTL: KTUtil.isRTL(),
+
+              header: {
+                  left: 'prev,next today',
+                  center: 'title',
+                  right: 'dayGridMonth,timeGridWeek,timeGridDay'
+              },
+
+              height: 800,
+              contentHeight: 780,
+              aspectRatio: 3,  // see: https://fullcalendar.io/docs/aspectRatio
+
+              nowIndicator: true,
+              now: TODAY + 'T09:25:00', // just for demo
+
+              views: {
+                  dayGridMonth: { buttonText: 'month' },
+                  timeGridWeek: { buttonText: 'week' },
+                  timeGridDay: { buttonText: 'day' }
+              },
+
+              defaultView: 'dayGridMonth',
+              defaultDate: TODAY,
+
+              editable: true,
+              eventLimit: true, // allow "more" link when too many events
+              navLinks: true,
+              events: [
+                <?php
+                $d_id='SM';
+                $query = "SELECT * FROM projects a
+                left join `hutulburlist` p on p.hutListCode = a.project_type_id where a.project_b_user = '$user_id'";
+                $results = mysqli_query($db, $query); ?>
+                <?php while($row = mysqli_fetch_assoc($results))  {   ?>
+                  {
+                      title: '<?php echo $row['hutListName']; ?>',
+                      start: YM,
+                      description: '<?php echo $row['hutListName']; ?>',
+                      className: "fc-event-danger fc-event-solid-warning",
+                      end: '<?php echo $row['project_ex_date']; ?>',
+                  },
+                <?php } ?>
+
+              ],
+
+              eventRender: function(info) {
+                  var element = $(info.el);
+
+                  if (info.event.extendedProps && info.event.extendedProps.description) {
+                      if (element.hasClass('fc-day-grid-event')) {
+                          element.data('content', info.event.extendedProps.description);
+                          element.data('placement', 'top');
+                          KTApp.initPopover(element);
+                      } else if (element.hasClass('fc-time-grid-event')) {
+                          element.find('.fc-title').append('<div class="fc-description">' + info.event.extendedProps.description + '</div>');
+                      } else if (element.find('.fc-list-item-title').lenght !== 0) {
+                          element.find('.fc-list-item-title').append('<div class="fc-description">' + info.event.extendedProps.description + '</div>');
+                      }
+                  }
+              }
+          });
+
+          calendar.render();
+      }
+  };
+}();
+
+jQuery(document).ready(function() {
+  KTCalendarBasic.init();
+});
+    </script>
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->

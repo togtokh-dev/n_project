@@ -30,6 +30,8 @@
 		<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="https://togtokh.dev/data/logo_v1_full.png" />
+    <?php echo $head_form; ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->

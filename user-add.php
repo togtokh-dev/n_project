@@ -127,7 +127,7 @@
 									<ul class="menu-nav">
 										<li class="menu-item menu-item-submenu menu-item-rel menu-item-active" data-menu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="menu-link menu-toggle">
-												<span class="menu-text">Баримт бичгийн жагсаалт</span>
+												<span class="menu-text">Бүртгэл үүсгэх</span>
 												<i class="menu-arrow"></i>
 											</a>
                     </li>

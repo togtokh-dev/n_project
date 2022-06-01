@@ -1,3 +1,18 @@
+<?php
+$numbers=['One','Two','Three','D','E','F'];
+$about_arr = array(
+  array('title' => "Компаний танилцуулга",'des'=>"МСМ компани нь програм хангамж боловсруулах, системийн интеграци болон мэдээллийн системийн цогц шийдлийг зах зээлд нийлүүлэн ажиллахаар 1996 онд байгуулагдсан бөгөөд Монголын мэдээлэл технологийн салбарын шилдэг компаниудын нэг билээ. Байгуулагдсан цагаасаа хойш чанартай бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж үйлчлүүлэгчдийнхээ сэтгэл ханамжийг өндөр байлгахыг зорилгоо болгон ажиллаж, Монголдоо “анхдагч” хэмээх тодотгол бүхий системийн шийдлүүд болон програм хангамжийн олон бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж байгаагаараа бид бахархдаг." ),
+  array('title' => "Алсын хараа",'des'=>"Цахим засгийн болон цахим бизнесийн шийдлийг дэлхийн түвшинд боловсруулна." ),
+  array('title' => "Эрхэм зорилго",'des'=>"Үргэлж шинийг эрэлхийлж, чанарыг эрхэмлэн, харилцагчдынхаа бүтээмжийг дээшлүүлж, зорилгодоо хүрэхэд нь тусална." ),
+  array('title' => "Хүний нөөцийн зорилт",'des'=>"Мэдлэгт суурилсан үйл ажиллагаа явуулдаг аливаа байгууллагын хамгийн үнэт зүйл бол хүний нөөц буюу мэргэжилтнүүд байдаг. Интерактив компани нь програм хангамж, системийн интеграцийн чиглэлээр сүүлийн 20 жилийн турш тасралтгүй ажиллаж, хүний нөөц, технологи дээр суурилсан үйл ажиллагаа явуулж ирсэн төдийгүй хүний нөөцийг хөгжүүлэх чиглэлээр өөрийн аргачлал, сургалтын хөтөлбөртэй, чанарын удирдлагын стандарт бүхий хүний нөөцийн удирдлагын иж бүрэн процесстой  байгууллага болон хөгжиж байна." ),
+  array('title' => "Салбарын хөгжил",'des'=>"Салбарын манлайлагч, ууган компани болохын хувьд өөрийн туршлага, чадвараа бусад програм хангамжийн компаниудад хуваалцан, хамтран хөгжих бодлогыг баримтлан ажиллаж байна. Энэ үүднээс Интерактив компани нь 2012 оноос МТҮПаркын зөвлөх компаниар ажиллаж өөрийн туршлага, менежмент, чанарын стандарт нэвтрүүлэх зэргээр инкубаторын болон салбарын бусад компаниудад зөвлөгөө өгч байна. Мөн өгөгдлийн сангийн технологиор дэлхийд тэргүүлэх компани Оракл-ын алтан түншээр ажиллаж, харилцагчдаа тэргүүлэх шийдлүүдийг нийлүүлэхээс гадна харилцагчид болон бусад компаниудад албан ёсны сургалтууд тогтмол явуулдаг нь салбарын боловсон хүчний чадавхыг сайжруулахад тодорхой хэмжээгээр нөлөө үзүүлдэг." ),
+  array('title' => "Нийгмийн хариуцлага",'des'=>"МСМ нь ил тод нээлттэй байж  Монгол Улсын хууль дүрмийг чанд сахин, олон улсын дүрэм, стандартуудыг даган мөрдөж, бизнесийн ёс зүйг дээдлэн, нийгмийн хариуцлагыг хэрэгжүүлэгч компани байхын төлөө ажилладаг." ),
+
+);
+
+ ?>
+
+
 <div class="content pt-0 d-flex flex-column flex-column-fluid" id="kt_content">
   <!--begin::Entry-->
   <!--begin::Hero-->
@@ -7,8 +22,8 @@
       <div class="d-flex justify-content-between align-items-center border-bottom border-white py-7">
         <h3 class="h4 text-dark mb-0"></h3>
         <div class="d-flex">
-          <a href="#" class="font-size-h6 font-weight-bold">Community</a>
-          <a href="#" class="font-size-h6 font-weight-bold ml-8">Visit Blog</a>
+          <a href="#" class="font-size-h6 font-weight-bold"></a>
+          <a href="#" class="font-size-h6 font-weight-bold ml-8"></a>
         </div>
       </div>
       <!--end::Topbar-->
@@ -16,33 +31,7 @@
         <!--begin::Heading-->
         <h1 class="text-dark font-weight-bolder mb-12">МСМ компани</h1>
         <!--end::Heading-->
-        <!--begin::Form-->
-        <form class="d-flex position-relative w-75 px-lg-40 m-auto">
-          <div class="input-group">
-            <!--begin::Icon-->
-            <div class="input-group-prepend">
-              <span class="input-group-text bg-white border-0 py-7 px-8">
-                <span class="svg-icon svg-icon-xl">
-                  <!--begin::Svg Icon | path:assets/media/svg/icons/General/Search.svg-->
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <rect x="0" y="0" width="24" height="24" />
-                      <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                      <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
-                    </g>
-                  </svg>
-                  <!--end::Svg Icon-->
-                </span>
-              </span>
             </div>
-            <!--end::Icon-->
-            <!--begin::Input-->
-            <input type="text" class="form-control h-auto border-0 py-7 px-1 font-size-h6" placeholder="Ask a question" />
-            <!--end::Input-->
-          </div>
-        </form>
-        <!--end::Form-->
-      </div>
     </div>
   </div>
   <!--end::Hero-->
@@ -170,11 +159,13 @@
             <div class="col-lg-7">
               <!--begin::Accordion-->
               <div class="accordion accordion-light accordion-light-borderless accordion-svg-toggle" id="accordionExample7">
+
+                <?php foreach ($about_arr as $key => $value) { ?>
                 <!--begin::Item-->
                 <div class="card">
                   <!--begin::Header-->
-                  <div class="card-header" id="headingOne7">
-                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne7" aria-expanded="true" role="button">
+                  <div class="card-header" id="heading<?php echo $numbers[$key]; ?>7">
+                    <div class="card-title" data-toggle="collapse" data-target="#collapse<?php echo $numbers[$key]; ?>7" aria-expanded="true" role="button">
                       <span class="svg-icon svg-icon-primary">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -186,148 +177,18 @@
                         </svg>
                         <!--end::Svg Icon-->
                       </span>
-                      <div class="card-label text-dark pl-4">Компаний танилцуулга</div>
+                      <div class="card-label text-dark pl-4"><?php print_r($value['title']); ?></div>
                     </div>
                   </div>
                   <!--end::Header-->
                   <!--begin::Body-->
-                  <div id="collapseOne7" class="collapse show" aria-labelledby="headingOne7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">МСМ компани нь програм хангамж боловсруулах, системийн интеграци болон мэдээллийн системийн цогц шийдлийг зах зээлд нийлүүлэн ажиллахаар 1996 онд байгуулагдсан бөгөөд Монголын мэдээлэл технологийн салбарын шилдэг компаниудын нэг билээ. Байгуулагдсан цагаасаа хойш чанартай бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж үйлчлүүлэгчдийнхээ сэтгэл ханамжийг өндөр байлгахыг зорилгоо болгон ажиллаж, Монголдоо “анхдагч” хэмээх тодотгол бүхий системийн шийдлүүд болон програм хангамжийн олон бүтээгдэхүүн, үйлчилгээг зах зээлд нийлүүлж байгаагаараа бид бахархдаг.</div>
+                  <div id="collapse<?php echo $numbers[$key]; ?>7" class="collapse show" aria-labelledby="heading<?php echo $numbers[$key]; ?>7" data-parent="#accordionExample7">
+                    <div class="card-body text-dark-50 font-size-lg pl-12"><?php print_r($value['des']); ?></div>
                   </div>
                   <!--end::Body-->
                 </div>
                 <!--end::Item-->
-                <!--begin::Item-->
-                <div class="card">
-                  <!--begin::Header-->
-                  <div class="card-header" id="headingTwo7">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
-                      <span class="svg-icon svg-icon-primary">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <polygon points="0 0 24 0 24 24 0 24" />
-                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      <div class="card-label text-dark pl-4">Алсын хараа</div>
-                    </div>
-                  </div>
-                  <!--end::Header-->
-                  <!--begin::Body-->
-                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Цахим засгийн болон цахим бизнесийн шийдлийг дэлхийн түвшинд боловсруулна.</div>
-                  </div>
-                  <!--end::Body-->
-                </div>
-                <!--end::Item-->
-                <!--begin::Item-->
-                <div class="card">
-                  <!--begin::Header-->
-                  <div class="card-header" id="headingTwo7">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
-                      <span class="svg-icon svg-icon-primary">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <polygon points="0 0 24 0 24 24 0 24" />
-                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      <div class="card-label text-dark pl-4">Эрхэм зорилго</div>
-                    </div>
-                  </div>
-                  <!--end::Header-->
-                  <!--begin::Body-->
-                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Үргэлж шинийг эрэлхийлж, чанарыг эрхэмлэн, харилцагчдынхаа бүтээмжийг дээшлүүлж, зорилгодоо хүрэхэд нь тусална.</div>
-                  </div>
-                  <!--end::Body-->
-                </div>
-                <div class="card">
-                  <!--begin::Header-->
-                  <div class="card-header" id="headingTwo7">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
-                      <span class="svg-icon svg-icon-primary">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <polygon points="0 0 24 0 24 24 0 24" />
-                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      <div class="card-label text-dark pl-4">Хүний нөөцийн зорилт</div>
-                    </div>
-                  </div>
-                  <!--end::Header-->
-                  <!--begin::Body-->
-                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Мэдлэгт суурилсан үйл ажиллагаа явуулдаг аливаа байгууллагын хамгийн үнэт зүйл бол хүний нөөц буюу мэргэжилтнүүд байдаг. Интерактив компани нь програм хангамж, системийн интеграцийн чиглэлээр сүүлийн 20 жилийн турш тасралтгүй ажиллаж, хүний нөөц, технологи дээр суурилсан үйл ажиллагаа явуулж ирсэн төдийгүй хүний нөөцийг хөгжүүлэх чиглэлээр өөрийн аргачлал, сургалтын хөтөлбөртэй, чанарын удирдлагын стандарт бүхий хүний нөөцийн удирдлагын иж бүрэн процесстой  байгууллага болон хөгжиж байна.</div>
-                  </div>
-                  <!--end::Body-->
-                </div>
-                <!--end::Item-->
-                <!--begin::Item-->
-                <div class="card">
-                  <!--begin::Header-->
-                  <div class="card-header" id="headingTwo7">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo7" aria-expanded="true" role="button">
-                      <span class="svg-icon svg-icon-primary">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <polygon points="0 0 24 0 24 24 0 24" />
-                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      <div class="card-label text-dark pl-4">Салбарын хөгжил</div>
-                    </div>
-                  </div>
-                  <!--end::Header-->
-                  <!--begin::Body-->
-                  <div id="collapseTwo7" class="collapse" aria-labelledby="headingTwo7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">Салбарын манлайлагч, ууган компани болохын хувьд өөрийн туршлага, чадвараа бусад програм хангамжийн компаниудад хуваалцан, хамтран хөгжих бодлогыг баримтлан ажиллаж байна. Энэ үүднээс Интерактив компани нь 2012 оноос МТҮПаркын зөвлөх компаниар ажиллаж өөрийн туршлага, менежмент, чанарын стандарт нэвтрүүлэх зэргээр инкубаторын болон салбарын бусад компаниудад зөвлөгөө өгч байна. Мөн өгөгдлийн сангийн технологиор дэлхийд тэргүүлэх компани Оракл-ын алтан түншээр ажиллаж, харилцагчдаа тэргүүлэх шийдлүүдийг нийлүүлэхээс гадна харилцагчид болон бусад компаниудад албан ёсны сургалтууд тогтмол явуулдаг нь салбарын боловсон хүчний чадавхыг сайжруулахад тодорхой хэмжээгээр нөлөө үзүүлдэг.</div>
-                  </div>
-                  <!--end::Body-->
-                </div>
-                <div class="card">
-                  <!--begin::Header-->
-                  <div class="card-header" id="headingThree7">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree7" aria-expanded="true" role="button">
-                      <span class="svg-icon svg-icon-primary">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <polygon points="0 0 24 0 24 24 0 24" />
-                            <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero" />
-                            <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)" />
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      <div class="card-label text-dark pl-4">Нийгмийн хариуцлага</div>
-                    </div>
-                  </div>
-                  <!--end::Header-->
-                  <!--begin::Body-->
-                  <div id="collapseThree7" class="collapse" aria-labelledby="headingThree7" data-parent="#accordionExample7">
-                    <div class="card-body text-dark-50 font-size-lg pl-12">МСМ нь ил тод нээлттэй байж  Монгол Улсын хууль дүрмийг чанд сахин, олон улсын дүрэм, стандартуудыг даган мөрдөж, бизнесийн ёс зүйг дээдлэн, нийгмийн хариуцлагыг хэрэгжүүлэгч компани байхын төлөө ажилладаг.</div>
-                  </div>
-                  <!--end::Body-->
-                </div>
-                <!--end::Item-->
+                <?php }  ?>
               </div>
               <!--end::Accordion-->
             </div>
@@ -363,52 +224,4 @@
   </div>
   <!--end::Section-->
   <!--begin::Section-->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <!--begin::Callout-->
-        <div class="card card-custom p-6 mb-8 mb-lg-0">
-          <div class="card-body">
-            <div class="row">
-              <!--begin::Content-->
-              <div class="col-sm-7">
-                <h2 class="text-dark mb-4">Get in Touch</h2>
-                <p class="text-dark-50 line-height-lg">Windows 10 automatically installs updates to make for sure</p>
-              </div>
-              <!--end::Content-->
-              <!--begin::Button-->
-              <div class="col-sm-5 d-flex align-items-center justify-content-sm-end">
-                <a href="custom/apps/support-center/feedback.html" class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Submit a Request</a>
-              </div>
-              <!--end::Button-->
-            </div>
-          </div>
-        </div>
-        <!--end::Callout-->
-      </div>
-      <div class="col-lg-6">
-        <!--begin::Callout-->
-        <div class="card card-custom p-6">
-          <div class="card-body">
-            <div class="row">
-              <!--begin::Content-->
-              <div class="col-sm-7">
-                <h2 class="text-dark mb-4">Live Chat</h2>
-                <p class="text-dark-50 line-height-lg">Windows 10 automatically installs updates to make for sure</p>
-              </div>
-              <!--end::Content-->
-              <!--begin::Button-->
-              <div class="col-sm-5 d-flex align-items-center justify-content-sm-end">
-                <a href="#" data-toggle="modal" data-target="#kt_chat_modal" class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Start Chat</a>
-              </div>
-              <!--end::Button-->
-            </div>
-          </div>
-        </div>
-        <!--end::Callout-->
-      </div>
-    </div>
-  </div>
-  <!--end::Section-->
-  <!--end::Entry-->
 </div>

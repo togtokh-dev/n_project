@@ -40,7 +40,7 @@
         <!--end::Card header-->
         <!--begin::Card body-->
         <div class="card-body px-0">
-          <form class="form" id="kt_form">
+          <form class="form" id="kt_form" action="insert.php"  method="post">
             <div class="tab-content">
               <!--begin::Tab-->
               <div class="tab-pane show active px-7" id="kt_user_edit_tab_1" role="tabpanel">
@@ -56,40 +56,37 @@
                       </div>
                     </div>
                     <!--end::Row-->
-                    <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Хөтөлбөрийн зураг</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Төрөл</label>
                       <div class="col-9">
-                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(
-                          <?php if($_SESSION['user']['zurag']){echo $_SESSION['user']['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>)">
-                          <div class="image-input-wrapper" style="    width: 466px;"></div>
-                          <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
-                            <i class="fa fa-pen icon-sm text-muted"></i>
-                            <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" name="profile_avatar_remove" />
-                          </label>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="Remove avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
-                        </div>
+                        <select class="form-control" id="exampleSelect1"  name="type">
+                          <option value="">Хөтөлбөр сонгох</option>
+                          <?php
+                          $d_id=$_GET['type'];
+                          $query = "SELECT * FROM hutulburlist";
+                          $results = mysqli_query($db, $query); ?>
+                          <?php while($row = mysqli_fetch_assoc($results))  {   ?>
+                          <option value="<?php echo $row['hutListCode']; ?>"><?php echo $row['hutListName']; ?></option>
+                            <?php } ?>
+                        </select>
                       </div>
                     </div>
-                    <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Хариуцагч</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Ажилтан сонгох</option>
+                        <select class="form-control" id="exampleSelect1" name="us_id_1">
+                          <option value="">Ажилтан сонгох</option>
                           <?php
                           $d_id=$_GET['type'];
-                          $query = "SELECT * FROM ajiltan";
+                          $query = "SELECT  a.ajiltanCode , d.depName, p.posNer, a.ajiltanNer FROM ajiltan a
+left join position p on p.posCode = a.posCode
+left join department d on d.depCode = a.depCode
+where a.turul = 'H'";
                           $results = mysqli_query($db, $query); ?>
                           <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['ajiltanNer']; ?></option>
+                          <option value="<?php echo $row['ajiltanCode']; ?>"><?php  echo $row['depName'].' / '.$row['posNer'].' / '.$row['ajiltanNer']; ?></option>
+
                             <?php } ?>
                         </select>
                       </div>
@@ -99,39 +96,35 @@
                     <div class="form-group row">
                       <label class="col-form-label col-3 text-lg-right text-left">Хариуцуулагч</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Ажилтан сонгох</option>
+                        <select class="form-control" id="exampleSelect1"  name="us_id_2">
+                          <option value="">Ажилтан сонгох</option>
                           <?php
                           $d_id=$_GET['type'];
-                          $query = "SELECT * FROM ajiltan";
+                          $query = "SELECT a.ajiltanCode , d.depName, p.posNer, a.ajiltanNer FROM ajiltan a
+left join position p on p.posCode = a.posCode
+left join department d on d.depCode = a.depCode
+where a.turul = 'A'";
                           $results = mysqli_query($db, $query); ?>
                           <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['ajiltanNer']; ?></option>
+                          <option value="<?php echo $row['ajiltanCode']; ?>"><?php  echo $row['depName'].' / '.$row['posNer'].' / '.$row['ajiltanNer']; ?></option>
                             <?php } ?>
                         </select>
                       </div>
                     </div>
                     <!--end::Group-->
-                    <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Төрөл</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Дуусах хугцаа</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Хөтөлбөр сонгох</option>
-                          <?php
-                          $d_id=$_GET['type'];
-                          $query = "SELECT * FROM hutulburlist";
-                          $results = mysqli_query($db, $query); ?>
-                          <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['hutListName']; ?></option>
-                            <?php } ?>
-                        </select>
+                      <input type="date"  class="form-control" name="date" value="">
                       </div>
                     </div>
+                    <!--end::Group-->
+                    <!--begin::Group-->
+
                   </div>
                 </div>
                 <div class="card-footer">
-									<button type="reset" class="btn btn-primary mr-2">Үүсгэх</button>
+									<button type="submit" class="btn btn-primary mr-2">Үүсгэх</button>
 								</div>
                 <!--end::Row-->
               </div>

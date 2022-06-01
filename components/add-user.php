@@ -40,7 +40,7 @@
         <!--end::Card header-->
         <!--begin::Card body-->
         <div class="card-body px-0">
-          <form class="form" id="kt_form">
+          <form class="form" id="kt_form" action="insert.php" method="post">
             <div class="tab-content">
               <!--begin::Tab-->
               <div class="tab-pane show active px-7" id="kt_user_edit_tab_1" role="tabpanel">
@@ -52,173 +52,64 @@
                     <div class="row">
                       <label class="col-3"></label>
                       <div class="col-9">
-                        <!-- <h6 class="text-dark font-weight-bold mb-10">Хэрэглэгчийн мэдээлэл:</h6> -->
+                        <h6 class="text-dark font-weight-bold mb-10">Шинэ ажилтаны мэдээлэл : </h6>
                       </div>
                     </div>
                     <!--end::Row-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Хөтөлбөрийн зураг</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Ажилтаны код</label>
                       <div class="col-9">
-                        <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(
-                          <?php if($_SESSION['user']['zurag']){echo $_SESSION['user']['zurag'];}else{ echo 'assets/media/users/blank.png';} ?>)">
-                          <div class="image-input-wrapper" style="    width: 466px;"></div>
-                          <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
-                            <i class="fa fa-pen icon-sm text-muted"></i>
-                            <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
-                            <input type="hidden" name="profile_avatar_remove" />
-                          </label>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
-                          <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="Remove avatar">
-                            <i class="ki ki-bold-close icon-xs text-muted"></i>
-                          </span>
-                        </div>
+                        <input class="form-control form-control-lg form-control mb-1" name="ajiltanCode" type="text" value="" />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Хариуцагч</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Овог</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Ажилтан сонгох</option>
-                          <?php
-                          $d_id=$_GET['type'];
-                          $query = "SELECT * FROM ajiltan";
-                          $results = mysqli_query($db, $query); ?>
-                          <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['ajiltanNer']; ?></option>
-                            <?php } ?>
-                        </select>
+                        <input class="form-control form-control-lg form-control mb-1"name="ajiltanOvog" type="text" value="" />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Хариуцуулагч</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">Нэр</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Ажилтан сонгох</option>
-                          <?php
-                          $d_id=$_GET['type'];
-                          $query = "SELECT * FROM ajiltan";
-                          $results = mysqli_query($db, $query); ?>
-                          <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['ajiltanNer']; ?></option>
-                            <?php } ?>
-                        </select>
+                        <input class="form-control form-control-lg form-control mb-1" name="ajiltanNer" type="text" value="" />
                       </div>
                     </div>
                     <!--end::Group-->
                     <!--begin::Group-->
                     <div class="form-group row">
-                      <label class="col-form-label col-3 text-lg-right text-left">Төрөл</label>
+                      <label class="col-form-label col-3 text-lg-right text-left">РД</label>
                       <div class="col-9">
-                        <select class="form-control" id="exampleSelect1">
-                          <option>Хөтөлбөр сонгох</option>
-                          <?php
-                          $d_id=$_GET['type'];
-                          $query = "SELECT * FROM hutulburlist";
-                          $results = mysqli_query($db, $query); ?>
-                          <?php while($row = mysqli_fetch_assoc($results))  {   ?>
-                          <option><?php echo $row['hutListName']; ?></option>
-                            <?php } ?>
-                        </select>
+                        <input class="form-control form-control-lg form-control mb-1" name="registerNumber" type="text" value="" />
                       </div>
                     </div>
+                    <!--end::Group-->
+                    <!--begin::Group-->
+                    <div class="form-group row">
+                      <label class="col-form-label col-3 text-lg-right text-left">Цахим хаяг</label>
+                      <div class="col-9">
+                        <input class="form-control form-control-lg form-control mb-1" name="mail" type="text" value="" />
+                      </div>
+                    </div>
+                    <!--end::Group-->
+                    <!--begin::Group-->
+                    <div class="form-group row">
+                      <label class="col-form-label col-3 text-lg-right text-left">Нууц үг</label>
+                      <div class="col-9">
+                        <input class="form-control form-control-lg form-control mb-1" name="password" type="text" value="" />
+                      </div>
+                    </div>
+                    <!--end::Group-->
                   </div>
                 </div>
                 <div class="card-footer">
-									<button type="reset" class="btn btn-primary mr-2">Үүсгэх</button>
+									<button type="submit" class="btn btn-primary mr-2">Үүсгэх</button>
 								</div>
                 <!--end::Row-->
-              </div>
-              <!--end::Tab-->
-              <!--begin::Tab-->
-              <div class="tab-pane px-7" id="kt_user_edit_tab_2" role="tabpanel">
-                <!--begin::Body-->
-                <div class="card-body">
-                  <!--begin::Row-->
-                  <div class="row">
-                    <div class="col-xl-2"></div>
-                    <div class="col-xl-7">
-                      <!--begin::Row-->
-                      <div class="row mb-5">
-                        <label class="col-3"></label>
-                        <div class="col-9">
-                          <div class="alert alert-custom alert-light-danger fade show py-4" role="alert">
-                            <div class="alert-icon">
-                              <i class="flaticon-warning"></i>
-                            </div>
-                            <div class="alert-text font-weight-bold">Configure user passwords to expire periodically.
-                            <br />Users will need warning that their passwords are going to expire, or they might inadvertently get locked out of the system!</div>
-                            <div class="alert-close">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">
-                                  <i class="la la-close"></i>
-                                </span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--end::Row-->
-                      <!--begin::Row-->
-                      <div class="row">
-                        <label class="col-3"></label>
-                        <div class="col-9">
-                          <h6 class="text-dark font-weight-bold mb-10">Change Or Recover Your Password:</h6>
-                        </div>
-                      </div>
-                      <!--end::Row-->
-                      <!--begin::Group-->
-                      <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">Current Password</label>
-                        <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid mb-1" type="text" value="Current password" />
-                          <a href="#" class="font-weight-bold font-size-sm">Forgot password ?</a>
-                        </div>
-                      </div>
-                      <!--end::Group-->
-                      <!--begin::Group-->
-                      <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">New Password</label>
-                        <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid" type="text" value="New password" />
-                        </div>
-                      </div>
-                      <!--end::Group-->
-                      <!--begin::Group-->
-                      <div class="form-group row">
-                        <label class="col-form-label col-3 text-lg-right text-left">Verify Password</label>
-                        <div class="col-9">
-                          <input class="form-control form-control-lg form-control-solid" type="text" value="Verify password" />
-                        </div>
-                      </div>
-                      <!--end::Group-->
-                    </div>
-                  </div>
-                  <!--end::Row-->
-                </div>
-                <!--end::Body-->
-                <!--begin::Footer-->
-                <div class="card-footer pb-0">
-                  <div class="row">
-                    <div class="col-xl-2"></div>
-                    <div class="col-xl-7">
-                      <div class="row">
-                        <div class="col-3"></div>
-                        <div class="col-9">
-                          <a href="#" class="btn btn-light-primary font-weight-bold">Save changes</a>
-                          <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--end::Footer-->
               </div>
               <!--end::Tab-->
             </div>
