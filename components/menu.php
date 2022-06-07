@@ -6,10 +6,17 @@
       <span class="menu-text">Танилцуулга</span>
     </a>
   </li>
+  <li class="menu-item" aria-haspopup="true">
+    <a href="dashboard.php" class="menu-link">
+      <i class="menu-icon flaticon-dashboard"></i>
+      <span class="menu-text">Dashboard</span>
+    </a>
+  </li>
   <li class="menu-section">
     <h4 class="menu-text">Хэрэглүүр</h4>
     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
   </li>
+    <?php if(!isA()){ ?>
   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
     <a href="javascript:;" class="menu-link menu-toggle">
       <i class="menu-icon flaticon2-grids"></i>
@@ -63,29 +70,34 @@
      </ul>
     </div>
   </li>
+    <?php } ?>
   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
     <a href="files.php" class="menu-link ">
       <i class="menu-icon flaticon2-checking"></i>
       <span class="menu-text">Баримт бичгийн жагсаалт</span>
     </a>
   </li>
+  <?php if(!isA()){ ?>
   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
     <a href="add-file.php" class="menu-link ">
       <i class="menu-icon flaticon-add"></i>
       <span class="menu-text">Хөтөлбөр үүсгэх</span>
     </a>
   </li>
+  <?php } ?>
   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
     <a href="program.php" class="menu-link ">
       <i class="menu-icon flaticon-web"></i>
       <span class="menu-text">Хөтөлбөр</span>
     </a>
   </li>
+  <?php if(isM()){ ?>
   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
     <a href="user-add.php" class="menu-link ">
       <i class="menu-icon flaticon-user-add"></i>
       <span class="menu-text">Бүртгэл үүсгэх</span>
     </a>
   </li>
+<?php } ?>
 </ul>
 <!--end::Menu Nav-->

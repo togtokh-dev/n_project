@@ -11,6 +11,7 @@
 
   function isA()
   {
+    //Шинэ ажилтан
     if (isset($_SESSION['user']) && $_SESSION['user']['turul'] == 'A' ) {
       return true;
     }else{
@@ -19,6 +20,7 @@
   }
   function isH()
   {
+    //Хариуцагч
     if (isset($_SESSION['user']) && $_SESSION['user']['turul'] == 'H' ) {
       return true;
     }else{
@@ -27,6 +29,7 @@
   }
   function isM()
   {
+    //Менежер
     if (isset($_SESSION['user']) && $_SESSION['user']['turul'] == 'M' ) {
       return true;
     }else{
